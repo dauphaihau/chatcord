@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bad-words": "^3.0.4",
+    "date-format": "^4.0.3",
     "express": "^4.17.2",
     "socket.io": "^4.4.1"
   },
