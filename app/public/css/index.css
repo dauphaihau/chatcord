@@ -1,61 +1,143 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-.app {
-  background-color: #505170;
-}
-.title-app {
-  height: 10vh;
-  font-size: 60px;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(90deg, #4550f8 0%, #fd632f 100%);
-}
-.chat-app {
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/** {*/
+/*  margin: 0px;*/
+/*  padding: 0px;*/
+/*  box-sizing: border-box;*/
+/*}*/
+/*.app {*/
+/*  background-color: #505170;*/
+/*}*/
+/*.title-app {*/
+/*  height: 10vh;*/
+/*  font-size: 60px;*/
+/*  -webkit-background-clip: text;*/
+/*  -webkit-text-fill-color: transparent;*/
+/*  background-image: linear-gradient(90deg, #4550f8 0%, #fd632f 100%);*/
+/*}*/
+/*.chat-app {*/
+/*  height: 90vh;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*}*/
+
+/*.chat-app__wrapper {*/
+/*}*/
+
+/*.chat-app__left {*/
+/*  display: flex;*/
+/*  justify-content: left;*/
+/*  align-items: center;*/
+/*}*/
+
+/*.chat-app__image {*/
+/*  width: 90%;*/
+/*}*/
+
+/*.chat-app__right {*/
+/*  padding: 30px 50px;*/
+/*  border-radius: 20px;*/
+/*  background-color: #ffffff;*/
+/*}*/
+
+/*.chat-app__title {*/
+/*  text-align: center;*/
+/*  color: #e53434;*/
+/*}*/
+
+/*.chat-app__title--line {*/
+/*  width: 40%;*/
+/*  margin: 20px auto;*/
+/*  background-color: #e53434;*/
+/*  height: 3px;*/
+/*  border-radius: 50%;*/
+/*}*/
+/*.chat-app__btn-join {*/
+/*  padding: 5px 10px;*/
+/*  background-color: #e53434;*/
+/*  color: #ffffff;*/
+/*  border: none;*/
+/*  border-radius: 10px;*/
+/*  font-size: 30px;*/
+/*}*/
+
+body {
+  font-family: "Lato", sans-serif;
 }
 
-.chat-app__wrapper {
+
+
+.main-head{
+  height: 150px;
+  background: #FFF;
+
 }
 
-.chat-app__left {
-  display: flex;
-  justify-content: left;
-  align-items: center;
+.sidenav {
+  height: 100%;
+  background-color: #000;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-.chat-app__image {
-  width: 90%;
+
+.main {
+  padding: 0px 10px;
 }
 
-.chat-app__right {
-  padding: 30px 50px;
-  border-radius: 20px;
-  background-color: #ffffff;
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
 }
 
-.chat-app__title {
-  text-align: center;
-  color: #e53434;
+@media screen and (max-width: 450px) {
+  .login-form{
+    margin-top: 10%;
+  }
+
+  .register-form{
+    margin-top: 10%;
+  }
 }
 
-.chat-app__title--line {
-  width: 40%;
-  margin: 20px auto;
-  background-color: #e53434;
-  height: 3px;
-  border-radius: 50%;
+@media screen and (min-width: 768px){
+  .main{
+    margin-left: 40%;
+  }
+
+  .sidenav{
+    width: 40%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
+  .login-form{
+    margin-top: 80%;
+  }
+
+  .register-form{
+    margin-top: 20%;
+  }
 }
-.chat-app__btn-join {
-  padding: 5px 10px;
-  background-color: #e53434;
-  color: #ffffff;
-  border: none;
-  border-radius: 10px;
-  font-size: 30px;
+
+
+.login-main-text{
+  margin-top: 20%;
+  padding: 60px;
+  color: #fff;
+}
+
+.login-main-text h2{
+  font-weight: 300;
+}
+
+.btn-black{
+  background-color: #000 ;
+  color: #fff;
+}
+
+.btn-black:hover {
+  background-color: white;
+  color: #000000;
+  border: 1px solid black;
 }

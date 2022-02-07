@@ -9,22 +9,10 @@ const path = require("path");
 const {createMessages} = require("./utils/createMessages");
 const {getUserList, removeUser, addUser, findUser} = require("./utils/users");
 
-const port = 1111;
-
 const publicPathDirectory = path.join(__dirname, "../public");
 app.use(express.static(publicPathDirectory));
 
-let count = 1;
-const message = 'Hi';
-
-// user connect
 io.on("connection", (socket) => {
-    // console.log("new client connected");
-
-    // socket.on("send message from client to server", (messageText) => {
-    //   io.emit("send message from server to client", messageText)
-    // })
-
 
     socket.on("join room from client to server", ({room, username}) => {
         socket.join(room);
@@ -85,14 +73,7 @@ io.on("connection", (socket) => {
             console.log(`${username} has left this room`);
         });
     });
-
-    // socket.emit("hi", message);
-
-    // socket.on("increase count", () => {
-    //     count++;
-    //     socket.emit('send counted', count)
-    // });
-
 });
 
+const port = process.env.PORT || 1111 ;
 server.listen(port, () => console.log(`app listen on port http://localhost:${port}`));
